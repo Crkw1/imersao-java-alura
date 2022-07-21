@@ -3,7 +3,6 @@ package src;
 import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
-import java.util.Map;
 
 
 public class App {
@@ -30,12 +29,12 @@ public class App {
             Conteudo conteudo = conteudos.get(i);
 
 
-            InputStream inputStream = new URL(conteudo.getUrlImagem()).openStream();
-            String nomeArquivo = "C:/Users/crkw/OneDrive/Imagens/Testes/" + conteudo.getTitulo() + ".png";
+            InputStream inputStream = new URL(conteudo.urlImagem()).openStream();
+            String nomeArquivo = "C:/Users/crkw/OneDrive/Imagens/Testes/" + conteudo.titulo() + ".png";
 
             geradora.cria(inputStream, nomeArquivo);
 
-            System.out.println(conteudo.getTitulo());
+            System.out.println(conteudo.titulo());
             System.out.println();
 
         }
