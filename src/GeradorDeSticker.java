@@ -13,7 +13,7 @@ public class GeradorDeSticker {
 
 
         // leitura da imagem
-        BufferedImage imagemOrinal = ImageIO.read(new File("/C:/Users/crkw/OneDrive/Imagens/filme.jpg"));
+        BufferedImage imagemOrinal = ImageIO.read(inputStream);
 
         // cria nova imagem em memoria com transparencia e com o tamanho novo
         int largura = imagemOrinal.getWidth();
@@ -34,7 +34,7 @@ public class GeradorDeSticker {
         graphics.drawString("DAHORA!",100,novaAltura - 100);
 
         // escrever a nova imagem em um arquivo
-        ImageIO.write(novaImagem, "png", new File("/C:/Users/crkw/OneDrive/Imagens/Desligamento/filme.png"));
+        ImageIO.write(novaImagem, "png", new File(nomeArquivo));
 
     }
 }
