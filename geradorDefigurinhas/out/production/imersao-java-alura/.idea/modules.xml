@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/imersao-java-alura.iml" filepath="$PROJECT_DIR$/.idea/imersao-java-alura.iml" />
-      <module fileurl="file://$PROJECT_DIR$/linguagens-api/linguagens-api/linguagens-api.iml" filepath="$PROJECT_DIR$/linguagens-api/linguagens-api/linguagens-api.iml" />
     </modules>
   </component>
 </project>
