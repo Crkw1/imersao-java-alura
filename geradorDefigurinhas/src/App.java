@@ -1,5 +1,3 @@
-package src;
-
 import java.io.InputStream;
 import java.net.URL;
 import java.util.List;
@@ -12,29 +10,29 @@ public class App {
 // Montagem do Http e conexão
 
         String url = "http://localhost:8080/linguagens";
-        ExtratorDeConteudo extrator = new ExtratorDeConteudoIMDB();
+        ExtratorDeConteudo extrator = new ExtratorDeConteudoDaNasa();
 
         var http = new ClienteHttp();
         String json = http.buscaDados(url);
 
         // exibir e manipular os dados
-        List<Conteudo> conteudos = extrator.extrairConteudos(json);
+        List<Conteudo> conteudos = extrator.extraiConteudos(json);
 
 
         var geradora = new GeradorDeSticker();
 
-// exibir e manipular os dados
+
         for (int i = 0; i < 3; i++) {
 
             Conteudo conteudo = conteudos.get(i);
 
 
-            InputStream inputStream = new URL(conteudo.urlImagem()).openStream();
-            String nomeArquivo = "C:/Users/crkw/OneDrive/Imagens/Testes/" + conteudo.titulo() + ".png";
+            InputStream inputStream = new URL(conteudo.getUrlImagem()).openStream();
+            String nomeArquivo = "C:/Users/crkw/OneDrive/Imagens/Testes/" + conteudo.getTitulo() + ".png";
 
             geradora.cria(inputStream, nomeArquivo);
 
-            System.out.println(conteudo.titulo());
+            System.out.println(conteudo.getTitulo());
             System.out.println();
 
         }

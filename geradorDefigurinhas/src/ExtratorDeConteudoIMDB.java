@@ -1,12 +1,10 @@
-package src;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 public class ExtratorDeConteudoIMDB implements ExtratorDeConteudo {
 
-    public List<Conteudo> extrairConteudo(String json) {
+    public List<Conteudo> extraiConteudos (String json) {
 
         var parser = new JsonParser();
         List<Map<String, String>> listaDeAtributos = parser.parse(json);
@@ -25,8 +23,4 @@ public class ExtratorDeConteudoIMDB implements ExtratorDeConteudo {
         return conteudos;
     }
 
-    @Override
-    public List<Conteudo> extrairConteudos(String json) {
-        return null;
-    }
 }
