@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="@localhost" uuid="c1bcbf85-ac13-4fda-8844-3da6a5b6309b">
+    <data-source source="LOCAL" name="aluraDB@localhost" uuid="c1bcbf85-ac13-4fda-8844-3da6a5b6309b">
       <driver-ref>mongo</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
-      <jdbc-url>mongodb://localhost:27017</jdbc-url>
+      <jdbc-url>mongodb://localhost:27017/aluraDB</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
